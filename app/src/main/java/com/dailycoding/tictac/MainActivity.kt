@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
     private var player1 = ""
     private var player2 = ""
     private var stepCount = 0
-    private var winState = false
+    private var winStatus = false
+    private var playerPoints1 = 0
+    private var playerPoints2 = 0
 
 
-    override
-
-    fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -291,7 +291,7 @@ class MainActivity : AppCompatActivity() {
 
 
         if (player1.indexOf("1") != -1 && player1.indexOf("2") != -1 && player1.indexOf("3") != -1) {
-            winState = true
+            winStatus = true
 
 
 
@@ -301,6 +301,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
 
                 box1.setBackgroundColor(Color.rgb(0, 117, 0))
                 box2.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -312,14 +314,15 @@ class MainActivity : AppCompatActivity() {
 
         if (player1.indexOf("3") != -1 && player1.indexOf("6") != -1 && player1.indexOf("9") != -1) {
 
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box3.setBackgroundColor(Color.rgb(0, 117, 0))
                 box6.setBackgroundColor(Color.rgb(0, 117, 0))
                 box9.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -328,7 +331,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player1.indexOf("7") != -1 && player1.indexOf("8") != -1 && player1.indexOf("9") != -1) {
-            winState = true
+            winStatus = true
 
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
@@ -336,7 +339,8 @@ class MainActivity : AppCompatActivity() {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box7.setBackgroundColor(Color.rgb(0, 117, 0))
                 box8.setBackgroundColor(Color.rgb(0, 117, 0))
                 box9.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -345,14 +349,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player1.indexOf("1") != -1 && player1.indexOf("5") != -1 && player1.indexOf("9") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box1.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
                 box9.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -361,14 +366,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player1.indexOf("3") != -1 && player1.indexOf("5") != -1 && player1.indexOf("7") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box3.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
                 box7.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -377,14 +383,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player1.indexOf("4") != -1 && player1.indexOf("5") != -1 && player1.indexOf("6") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box4.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
                 box6.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -394,14 +401,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (player1.indexOf("2") != -1 && player1.indexOf("5") != -1 && player1.indexOf("8") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box2.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
                 box8.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -410,14 +418,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player1.indexOf("1") != -1 && player1.indexOf("4") != -1 && player1.indexOf("7") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win1)
                 winSound.start()
-
+                playerPoints1 += 1
+                player1Point.text = playerPoints1.toString()
                 box1.setBackgroundColor(Color.rgb(0, 117, 0))
                 box4.setBackgroundColor(Color.rgb(0, 117, 0))
                 box7.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -425,7 +434,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        if (stepCount == 9 && !winState) {
+        if (stepCount == 9 && !winStatus) {
             drawSound.start()
             binding.statePlayer.text = getString(R.string.draw)
             Toast.makeText(this@MainActivity, "Draw", Toast.LENGTH_SHORT).show()
@@ -437,7 +446,7 @@ class MainActivity : AppCompatActivity() {
 
 
         if (player2.indexOf("1") != -1 && player2.indexOf("2") != -1 && player2.indexOf("3") != -1) {
-            winState = true
+            winStatus = true
 
 
             binding.apply {
@@ -446,7 +455,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "Player 1 wins", Toast.LENGTH_SHORT).show()
                 statePlayer.text = getString(R.string.win2)
                 winSound.start()
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 box1.setBackgroundColor(Color.rgb(0, 117, 0))
                 box2.setBackgroundColor(Color.rgb(0, 117, 0))
                 box3.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -456,14 +466,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (player2.indexOf("3") != -1 && player2.indexOf("6") != -1 && player2.indexOf("9") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win2)
                 winSound.start()
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 box3.setBackgroundColor(Color.rgb(0, 117, 0))
                 box6.setBackgroundColor(Color.rgb(0, 117, 0))
                 box9.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -472,7 +483,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player2.indexOf("7") != -1 && player2.indexOf("8") != -1 && player2.indexOf("9") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
@@ -480,7 +491,8 @@ class MainActivity : AppCompatActivity() {
                 statePlayer.text = getString(R.string.win2)
 
                 winSound.start()
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 box7.setBackgroundColor(Color.rgb(0, 117, 0))
                 box8.setBackgroundColor(Color.rgb(0, 117, 0))
                 box9.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -489,13 +501,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player2.indexOf("1") != -1 && player2.indexOf("5") != -1 && player2.indexOf("9") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win2)
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 winSound.start()
                 box1.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -505,13 +518,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player2.indexOf("3") != -1 && player2.indexOf("5") != -1 && player2.indexOf("7") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win2)
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 winSound.start()
                 box3.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -521,13 +535,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player2.indexOf("4") != -1 && player2.indexOf("5") != -1 && player2.indexOf("6") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win2)
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 winSound.start()
                 box4.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -538,13 +553,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (player2.indexOf("2") != -1 && player2.indexOf("5") != -1 && player2.indexOf("8") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win2)
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 winSound.start()
                 box2.setBackgroundColor(Color.rgb(0, 117, 0))
                 box5.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -554,13 +570,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (player2.indexOf("1") != -1 && player2.indexOf("4") != -1 && player2.indexOf("7") != -1) {
-            winState = true
+            winStatus = true
 
             Toast.makeText(this@MainActivity, "Player 2 wins", Toast.LENGTH_SHORT).show()
             binding.apply {
                 clickableBox()
                 statePlayer.text = getString(R.string.win2)
-
+                playerPoints2 += 1
+                player2Point.text = playerPoints2.toString()
                 winSound.start()
                 box1.setBackgroundColor(Color.rgb(0, 117, 0))
                 box4.setBackgroundColor(Color.rgb(0, 117, 0))
@@ -570,7 +587,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        if (stepCount == 9 && !winState) {
+        if (stepCount == 9 && !winStatus) {
             drawSound.start()
             binding.statePlayer.text = getString(R.string.draw)
             Toast.makeText(this@MainActivity, "Draw", Toast.LENGTH_SHORT).show()
@@ -603,7 +620,7 @@ class MainActivity : AppCompatActivity() {
             player1 = ""
             player2 = ""
             stepCount = 0
-            winState = false
+            winStatus = false
 
             box1.setBackgroundColor(Color.rgb(84, 52, 42))
             box2.setBackgroundColor(Color.rgb(84, 52, 42))
